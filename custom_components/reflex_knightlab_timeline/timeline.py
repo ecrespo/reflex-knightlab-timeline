@@ -24,6 +24,14 @@ __all__ = ["KnightLabTimeline", "timeline"]
 TIMELINEJS_VERSION = "3.9.11"
 TIMELINEJS_PACKAGE = f"@knight-lab/timelinejs@{TIMELINEJS_VERSION}"
 
+# TimelineJS ships no built ESM/CJS entry point (no main/module/exports field),
+# so dynamically importing the package resolves to its *source* `src/js/index.js`,
+# whose first line is `import "../less/TL.Timeline.less"`. Vite therefore needs the
+# Less preprocessor available at build time. Declaring it here makes bun install it
+# into the frontend so the dynamic import compiles cleanly.
+LESS_VERSION = "4.6.6"
+LESS_PACKAGE = f"less@{LESS_VERSION}"
+
 # The React wrapper injected into the compiled page. It resolves the Timeline
 # class across CJS/ESM interop shapes, instantiates it, and wires the event API
 # (timeline.on(...)) back to the Reflex event handlers passed as props.
@@ -89,8 +97,9 @@ class KnightLabTimeline(rx.Component):
     # React component).
     tag = "KnightLabTimeline"
 
-    # Ensure the npm package is installed and version-pinned.
-    lib_dependencies: list[str] = [TIMELINEJS_PACKAGE]
+    # Ensure the npm package is installed and version-pinned. `less` is required
+    # so Vite can compile the `.less` that TimelineJS' source entry imports.
+    lib_dependencies: list[str] = [TIMELINEJS_PACKAGE, LESS_PACKAGE]
 
     # The TimelineJS data object (title / events / eras / scale).
     data: rx.Var[dict]
