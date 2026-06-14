@@ -1,5 +1,14 @@
 # reflex-knightlab-timeline
 
+[![PyPI version](https://img.shields.io/pypi/v/reflex-knightlab-timeline.svg)](https://pypi.org/project/reflex-knightlab-timeline/)
+[![Python versions](https://img.shields.io/pypi/pyversions/reflex-knightlab-timeline.svg)](https://pypi.org/project/reflex-knightlab-timeline/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ecrespo/reflex-knightlab-timeline/blob/main/LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-ecrespo%2Freflex--knightlab--timeline-181717?logo=github)](https://github.com/ecrespo/reflex-knightlab-timeline)
+
+- **Source:** https://github.com/ecrespo/reflex-knightlab-timeline
+- **PyPI:** https://pypi.org/project/reflex-knightlab-timeline/
+- **Issues:** https://github.com/ecrespo/reflex-knightlab-timeline/issues
+
 A native [Reflex](https://reflex.dev/) component that wraps
 [Knight Lab **TimelineJS**](https://timeline.knightlab.com/) so you can build
 interactive, storytelling timelines in **pure Python** — no HTML, no iframe, no

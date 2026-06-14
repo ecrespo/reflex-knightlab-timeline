@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "reflex-knightlab-timeline"
-version = "0.1.0"
+version = "0.1.1"
 description = "A native Reflex component wrapping Knight Lab TimelineJS for interactive storytelling timelines in pure Python."
 readme = "README.md"
 license = { text = "MIT" }
@@ -29,6 +29,11 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/ecrespo/reflex-knightlab-timeline"
+Repository = "https://github.com/ecrespo/reflex-knightlab-timeline"
+Issues = "https://github.com/ecrespo/reflex-knightlab-timeline/issues"
+Documentation = "https://github.com/ecrespo/reflex-knightlab-timeline#readme"
+Changelog = "https://github.com/ecrespo/reflex-knightlab-timeline/releases"
+"PyPI" = "https://pypi.org/project/reflex-knightlab-timeline/"
 "TimelineJS" = "https://timeline.knightlab.com/"
 
 [tool.setuptools.packages.find]
