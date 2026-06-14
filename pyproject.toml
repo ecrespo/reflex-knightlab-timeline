@@ -13,7 +13,6 @@ authors = [{ name = "Ernesto Crespo", email = "ecrespo@gmail.com" }]
 keywords = ["reflex", "timeline", "timelinejs", "knightlab", "component", "visualization"]
 classifiers = [
     "Development Status :: 4 - Beta",
-    "Framework :: Reflex",
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
