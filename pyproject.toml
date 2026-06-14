@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reflex-knightlab-timeline"
+version = "0.1.0"
+description = "A native Reflex component wrapping Knight Lab TimelineJS for interactive storytelling timelines in pure Python."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Ernesto Crespo", email = "ecrespo@gmail.com" }]
+keywords = ["reflex", "timeline", "timelinejs", "knightlab", "component", "visualization"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Reflex",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "reflex>=0.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "build",
+]
+
+[project.urls]
+Homepage = "https://github.com/ecrespo/reflex-knightlab-timeline"
+"TimelineJS" = "https://timeline.knightlab.com/"
+
+[tool.setuptools.packages.find]
+where = ["custom_components"]
+
+[tool.pytest.ini_options]
+pythonpath = ["custom_components"]
+testpaths = ["tests"]
+addopts = "-q"
