@@ -131,6 +131,12 @@ class TestSlide:
         with pytest.raises(ValueError):
             Event(text=Text("no date")).validate(require_date=True)
 
+    def test_media_without_url_is_rejected(self):
+        # TimelineJS crashes ("reading 'match'") on a media block with no url
+        ev = Event(start_date=TLDate(2024), media=Media(credit="Coursera"))
+        with pytest.raises(ValueError):
+            ev.validate(require_date=True)
+
     def test_title_slide_does_not_require_date(self):
         # title slides are allowed to omit a start_date
         Slide(text=Text("My Title")).validate(require_date=False)

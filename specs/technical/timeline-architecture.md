@@ -202,7 +202,7 @@ try { new TimelineClass(el, data, options); } catch (e) { console.error(e); }
 | Contrato (componente) | Contrato clave | pytest + reflex | tag/deps/imports/custom-code/eventos/creación |
 | Integración manual | Happy path | demo `reflex run` | render real en navegador, navegación, `on_change` |
 
-Enfoque **TDD**: los tests se escribieron primero (estado *red*), luego la implementación los llevó a *green* (43 tests).
+Enfoque **TDD**: los tests se escribieron primero (estado *red*), luego la implementación los llevó a *green* (43 tests en v0.1; 45 en v0.2.0).
 
 ## 9. Plan de Migración / Rollout
 
@@ -224,3 +224,4 @@ Enfoque **TDD**: los tests se escribieron primero (estado *red*), luego la imple
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
 | 1.0 | 2026-06-14 | Ernesto Crespo | Versión inicial |
+| 1.1 | 2026-10-24 | Ernesto Crespo | v0.2.0: TimelineJS se monta en un `div` interno al 100% porque sobrescribe el `className` del nodo (perdía la altura); Reflex ≥ 0.10.0 |

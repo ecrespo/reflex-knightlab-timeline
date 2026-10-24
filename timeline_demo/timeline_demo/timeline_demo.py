@@ -16,7 +16,6 @@ import reflex as rx
 
 from reflex_knightlab_timeline import (
     Event,
-    Media,
     Slide,
     Text,
     TimelineData,
@@ -37,7 +36,6 @@ PYTHON_TIMELINE = TimelineData(
         Event(
             start_date=TLDate(2024, 12, 14),
             text=Text("Claude Code in Action", "Anthropic Academy"),
-            media=Media(credit="Anthropic Academy"),
             group="AI",
         ),
         Event(
@@ -48,7 +46,6 @@ PYTHON_TIMELINE = TimelineData(
         Event(
             start_date=TLDate(2023, 11, 22),
             text=Text("Data Scientist Professional with Python", "Datacamp"),
-            media=Media(credit="Datacamp"),
             group="Data",
         ),
     ],

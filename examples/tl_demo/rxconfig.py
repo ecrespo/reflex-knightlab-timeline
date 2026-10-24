@@ -4,5 +4,6 @@ config = rx.Config(
     app_name="tl_demo",
     plugins=[
         rx.plugins.TailwindV4Plugin(),
+        rx.plugins.SitemapPlugin(),
     ],
 )

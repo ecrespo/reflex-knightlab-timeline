@@ -132,7 +132,7 @@ Empaquetar TimelineJS como componente Reflex nativo, versionado vía npm, con bu
 - La serialización de datos (Python → dict) debe ser O(n) sobre el número de eventos; 178 eventos se serializan en milisegundos.
 
 ### Compatibilidad
-- Python ≥ 3.10; Reflex ≥ 0.8.0; TimelineJS 3.9.x (pin a 3.9.11).
+- Python ≥ 3.11; Reflex ≥ 0.10.0; TimelineJS 3.9.x (pin a 3.9.11).
 - SSR-safe: la instanciación de TimelineJS ocurre solo en cliente (dentro de `useEffect`).
 
 ### Mantenibilidad
@@ -152,7 +152,7 @@ Empaquetar TimelineJS como componente Reflex nativo, versionado vía npm, con bu
 | Dependencia | Tipo | Owner | Estado | Riesgo |
 |---|---|---|---|---|
 | `@knight-lab/timelinejs` | npm | Knight Lab | Estable (3.9.11) | Bajo |
-| `reflex` | pip | Reflex.dev | Estable (≥0.8) | Bajo |
+| `reflex` | pip | Reflex.dev | Estable (≥0.10) | Bajo |
 
 ## 9. User Stories
 
@@ -198,6 +198,7 @@ Empaquetar TimelineJS como componente Reflex nativo, versionado vía npm, con bu
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
 | 1.0 | 2026-06-14 | Ernesto Crespo | Versión inicial |
+| 1.1 | 2026-10-24 | Ernesto Crespo | v0.2.0: Python ≥ 3.11, Reflex ≥ 0.10.0 |
 
 ## Aprobaciones
 
