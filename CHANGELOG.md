@@ -23,7 +23,7 @@ All notable changes to this project are documented here. The format follows
 
 ### Added
 - GitHub Actions CI (tests on Python 3.11–3.13, build, `twine check`) and a
-  tag-triggered PyPI release workflow.
+  tag-triggered PyPI release workflow (Trusted Publishing).
 
 ## [0.1.2]
 

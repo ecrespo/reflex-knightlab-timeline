@@ -48,10 +48,9 @@ jobs:
         with:
           name: dist
           path: dist/
-      - uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          # Empty when the secret is unset -> falls back to Trusted Publishing.
-          password: ${{ secrets.PYPI_API_TOKEN }}
+      # Pinned to a commit: this job holds an OIDC token that can publish.
+      # Authenticates via PyPI Trusted Publishing (no stored token).
+      - uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
 
   release:
     name: GitHub release
