@@ -178,7 +178,7 @@ Releases are published to PyPI by GitHub Actions:
 4. `.github/workflows/publish.yml` checks that the tag matches the
    `pyproject.toml` version, re-runs the tests, builds, publishes to PyPI and
    creates the GitHub release. It authenticates with PyPI Trusted Publishing
-   (OIDC, environment `pypi`) or, if set, the `PYPI_API_TOKEN` repository secret.
+   (OIDC, workflow `publish.yml`, environment `pypi`); no API token is stored.
 
 ## Project layout
 
