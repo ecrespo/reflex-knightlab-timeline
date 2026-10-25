@@ -5,6 +5,8 @@ presentation options, and the imperative TimelineJS `on_change` event wired back
 into Reflex state.
 """
 
+from importlib.metadata import version
+
 import reflex as rx
 
 from reflex_knightlab_timeline import (
@@ -60,7 +62,7 @@ def index() -> rx.Component:
     return rx.container(
         rx.vstack(
             rx.heading("reflex-knightlab-timeline — sandbox demo", size="6"),
-            rx.text("Clean install from PyPI (v0.1.2)."),
+            rx.text(f"Clean install from PyPI (v{version('reflex-knightlab-timeline')})."),
             rx.text(
                 "Current slide: ",
                 rx.code(rx.cond(State.current_slide != "", State.current_slide, "—")),

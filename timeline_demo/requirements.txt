@@ -1,2 +1,2 @@
-reflex==0.9.5.post2
-reflex-knightlab-timeline>=0.1.2
+reflex==0.10.0
+reflex-knightlab-timeline>=0.2.0

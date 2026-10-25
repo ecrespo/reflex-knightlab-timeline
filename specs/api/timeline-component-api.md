@@ -152,13 +152,14 @@ Métodos:
 | `TLDate` sin `year` | `ValueError` |
 | Event sin `start_date.year` (en `validate`) | `ValueError` |
 | `scale` inválido | `ValueError` |
+| `media` sin `url` (en `validate`) | `ValueError` |
 | `timenav_position` inválido | `ValueError` |
 | Opción desconocida en `TimelineOptions` | `TypeError` |
 | (Cliente) clase Timeline no resoluble / init falla | `console.error`, sin crash |
 
 ## 7. Compatibilidad
 
-- Python ≥ 3.10, Reflex ≥ 0.8.0, TimelineJS pin `@knight-lab/timelinejs@3.9.11`.
+- Python ≥ 3.11, Reflex ≥ 0.10.0, TimelineJS pin `@knight-lab/timelinejs@3.9.11`.
 - El componente es SSR-safe (instanciación en cliente).
 
 ---
@@ -168,3 +169,4 @@ Métodos:
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
 | 1.0 | 2026-06-14 | Ernesto Crespo | Versión inicial |
+| 1.1 | 2026-10-24 | Ernesto Crespo | v0.2.0: Python ≥ 3.11, Reflex ≥ 0.10.0; `media` exige `url` |

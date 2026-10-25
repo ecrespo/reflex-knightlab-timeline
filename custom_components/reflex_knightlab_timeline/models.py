@@ -174,6 +174,9 @@ class Slide:
                 raise ValueError(
                     "Event slides must have a 'start_date' with at least a 'year'."
                 )
+        media = _as_dict(self.media)
+        if media is not None and not media.get("url"):
+            raise ValueError("A slide's 'media' block must include a 'url'.")
         return self
 
     def to_dict(self) -> dict[str, Any]:

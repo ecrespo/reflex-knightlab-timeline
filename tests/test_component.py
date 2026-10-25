@@ -48,6 +48,14 @@ class TestComponentContract:
         assert "new " in code and "Timeline" in code
         assert "@knight-lab/timelinejs" in code
 
+    def test_timeline_mounts_on_inner_node_so_sizing_survives(self):
+        # TimelineJS overwrites the className of the node it mounts on, which
+        # drops the emotion class carrying width/height. The wrapper must keep
+        # the sized props on an outer div and mount on a 100%-sized inner div.
+        code = "\n".join(KnightLabTimeline().add_custom_code())
+        assert "<div {...rest}>" in code
+        assert 'ref={containerRef} style={{ width: "100%", height: "100%" }}' in code
+
     def test_event_triggers_exist(self):
         triggers = KnightLabTimeline.get_event_triggers()
         for ev in [

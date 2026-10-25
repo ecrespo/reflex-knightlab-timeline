@@ -84,7 +84,14 @@ function KnightLabTimeline({ data, options, onChange, onLoaded, onDataloaded,
       if (el) el.innerHTML = "";
     };
   }, [JSON.stringify(data), JSON.stringify(options)]);
-  return <div ref={containerRef} {...rest} />;
+  // TimelineJS overwrites the className of the node it mounts on, so the sized
+  // props (emotion class / style) live on an outer div and TimelineJS mounts on
+  // an inner div that fills it.
+  return (
+    <div {...rest}>
+      <div ref={containerRef} style={{ width: "100%", height: "100%" }} />
+    </div>
+  );
 }
 """.strip()
 
